@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Portal do Distribuidor Kaiabí</title>
+<meta name="theme-color" content="#2a1229">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1d0c1c;--bg2:#2a1229;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.12);--roxo:#673367;--gold:#d6c691;--gold2:#f1e4b0;--verde:#017761;--leaf:#2aa88a;--mut:rgba(255,255,255,.68)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--bg);color:#fff;font-family:Archivo,system-ui,sans-serif;min-height:100%}
+body{padding-bottom:calc(env(safe-area-inset-bottom) + 84px)}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:20;background:rgba(29,12,28,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:12px;padding-top:calc(env(safe-area-inset-top) + 12px);padding-bottom:12px}
+.logo{width:92px;color:var(--gold)}
+header .sp{flex:1}
+.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;color:var(--bg2);background:linear-gradient(135deg,var(--gold2),var(--gold))}
+h1,h2,h3{font-stretch:88%;letter-spacing:-.015em;line-height:1.08}
+h1{font-size:30px;font-weight:800}
+h2{font-size:22px;font-weight:800;margin:26px 0 12px}
+h3{font-size:17px;font-weight:800}
+.gold{color:var(--gold)}
+.mut{color:var(--mut)}
+.small{font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px}
+.stack{display:grid;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:16px;font-weight:800;font-size:15.5px;text-decoration:none;text-align:center}
+.btn.g{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--bg2)}
+.btn.w{background:#25d366;color:#07311a}
+.btn.o{background:rgba(255,255,255,.1);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.inp{width:100%;padding:15px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:16px;outline:none}
+.inp:focus{border-color:var(--gold)}
+label{display:block;font-size:13px;font-weight:700;color:var(--gold);margin:14px 0 6px}
+.help{font-size:12px;color:var(--mut);margin-top:6px}
+/* abas */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(29,12,28,.94);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:8px 6px calc(env(safe-area-inset-bottom) + 8px)}
+nav.tabs .in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+nav.tabs button{display:grid;justify-items:center;gap:3px;font-size:11px;font-weight:700;color:var(--mut);padding:6px 0}
+nav.tabs button i{font-style:normal;font-size:21px;filter:grayscale(1) opacity(.7)}
+nav.tabs button.on{color:var(--gold)}
+nav.tabs button.on i{filter:none}
+.view{display:none;padding-top:18px;animation:fi .35s}
+.view.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}}
+/* início */
+.hero{display:flex;gap:16px;align-items:center}
+.ring{flex:none;width:86px;height:86px;position:relative}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:20px;font-weight:800}
+.chk{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);text-align:left;width:100%}
+.chk .bx{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid rgba(255,255,255,.3);display:grid;place-items:center;font-size:14px}
+.chk.done .bx{background:var(--leaf);border-color:var(--leaf)}
+.chk.done .t{color:var(--mut);text-decoration:line-through}
+.chk .t{font-weight:700;font-size:15px}
+.chk .t small{display:block;font-weight:500;color:var(--mut);text-decoration:none;font-size:12.5px;margin-top:2px}
+.chk .go{margin-left:auto;color:var(--gold);font-size:20px}
+.mission{position:relative;overflow:hidden;border-radius:24px;padding:20px;background:linear-gradient(135deg,#5a2a59,#2a1229);border:1px solid rgba(214,198,145,.35)}
+.mission img{position:absolute;right:-6px;bottom:-10px;height:150px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+.mission .tag{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--verde);font-size:12px;font-weight:800;margin-bottom:10px}
+.mission h3{max-width:62%;font-size:20px}
+.mission p{max-width:60%;margin:6px 0 14px;font-size:13.5px;color:var(--mut)}
+.streak{display:flex;gap:10px;align-items:center;margin-top:12px;font-size:13.5px;color:var(--mut)}
+.streak b{color:var(--gold);font-size:18px}
+/* ferramentas */
+.tool{display:grid;gap:12px}
+.tool .top{display:flex;gap:14px;align-items:center}
+.tool .ic{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:26px;background:rgba(214,198,145,.14)}
+.tool code{display:block;font-size:12px;color:var(--gold2);word-break:break-all;background:rgba(0,0,0,.25);padding:10px 12px;border-radius:12px}
+.badge{display:inline-block;padding:4px 9px;border-radius:999px;font-size:11.5px;font-weight:800}
+.badge.ok{background:rgba(42,168,138,.25);color:#7fe0c6}
+.badge.wait{background:rgba(214,198,145,.2);color:var(--gold)}
+/* mídias */
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none;margin:0 -18px;padding-left:18px;padding-right:18px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:9px 14px;border-radius:999px;border:1px solid var(--line);font-size:13.5px;font-weight:700;color:var(--mut)}
+.chip.on{background:var(--gold);color:var(--bg2);border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.med{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:9/14;background:linear-gradient(170deg,var(--c,#5a2a59),#120610);text-align:left}
+.med img{position:absolute;left:50%;bottom:22%;height:58%;transform:translateX(-50%);filter:drop-shadow(0 10px 14px rgba(0,0,0,.5))}
+.med .nm{position:absolute;left:10px;right:10px;bottom:10px;font-weight:800;font-size:13.5px;line-height:1.15}
+.med .fm{position:absolute;left:10px;top:10px;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2);background:rgba(0,0,0,.3);padding:4px 7px;border-radius:8px}
+/* folha (bottom sheet) */
+#sheet{position:fixed;inset:0;z-index:60;display:none;background:rgba(8,3,8,.7);backdrop-filter:blur(6px);align-items:flex-end;justify-content:center}
+#sheet.on{display:flex}
+#sheet .box{width:100%;max-width:560px;max-height:92svh;overflow:auto;background:linear-gradient(180deg,#3a1b3a,#1d0c1c);border-radius:26px 26px 0 0;padding:18px 18px calc(env(safe-area-inset-bottom) + 18px);animation:up .4s cubic-bezier(.2,.9,.3,1)}
+@keyframes up{from{transform:translateY(100%)}}
+#sheet .x{float:right;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1)}
+#prev{display:block;width:62%;margin:6px auto 16px;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+textarea.inp{min-height:110px;resize:vertical;font-size:14px;line-height:1.45}
+/* academia */
+.trail{margin-top:8px}
+.les{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);width:100%;text-align:left}
+.les .n{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:rgba(214,198,145,.16);color:var(--gold)}
+.les.done .n{background:var(--leaf);color:#fff}
+.les .t{font-weight:700;font-size:15px}
+.les .t small{display:block;color:var(--mut);font-weight:500;font-size:12.5px;margin-top:2px}
+.lesson p{font-size:15.5px;line-height:1.55;margin-bottom:12px}
+.lesson .cl{display:flex;gap:10px;align-items:center;padding:12px 0;border-top:1px solid var(--line);font-weight:600}
+.lesson .cl input{width:22px;height:22px;accent-color:var(--leaf)}
+/* resultados */
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{padding:16px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.kpi b{display:block;font-size:30px;font-weight:800;font-stretch:80%;color:var(--gold)}
+.kpi span{font-size:12.5px;color:var(--mut)}
+.soon{padding:18px;border-radius:20px;border:1px dashed rgba(214,198,145,.45);background:rgba(214,198,145,.06)}
+.toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);z-index:90;background:#fff;color:var(--bg2);padding:12px 18px;border-radius:999px;font-weight:800;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:fi .3s}
+/* onboarding */
+#onb{position:fixed;inset:0;z-index:80;overflow:auto;background:radial-gradient(120% 60% at 50% 0%,#5a2a59,#1d0c1c 70%);display:none}
+#onb.on{display:block}
+#onb .wrap{padding-top:calc(env(safe-area-inset-top) + 40px);padding-bottom:40px}
+#onb .logo{display:block;margin:0 auto 22px;width:120px}
+#onb h1{text-align:center;font-size:32px}
+#onb .lead{text-align:center;color:var(--mut);margin:10px 0 18px;line-height:1.45}
+.perks{display:grid;gap:8px;margin:18px 0 6px}
+.perk{display:flex;gap:10px;align-items:center;font-weight:600;font-size:14.5px}
+.perk i{font-style:normal;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:rgba(214,198,145,.16);flex:none}
+.lgpd{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:12.5px;color:var(--mut);line-height:1.4}
+.lgpd input{margin-top:2px;width:18px;height:18px;accent-color:var(--gold)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <svg class="logo" viewBox="4100 12500 12800 4660" aria-label="Kaiabí"></svg>
+  <div class="sp"></div>
+  <button class="av" id="me" aria-label="Meu perfil">K</button>
+</div></header>
+
+<main class="wrap">
+  <!-- INÍCIO -->
+  <section class="view on" id="v-inicio">
+    <div class="hero">
+      <div class="ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="3.4"/><circle id="ringArc" cx="18" cy="18" r="15.5" fill="none" stroke="#d6c691" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="0 100" pathLength="100"/></svg><b id="ringTxt">0%</b></div>
+      <div><p class="mut small">Olá,</p><h1 id="hello">Distribuidor</h1><p class="mut small" style="margin-top:4px">Seu portal para trabalhar no digital.</p></div>
+    </div>
+    <h2>Missão do dia</h2>
+    <div class="mission" id="mission"></div>
+    <div class="streak">🔥 <b id="streak">0</b> dias seguidos cumprindo a missão</div>
+    <h2>Primeiros passos</h2>
+    <div class="stack" id="steps"></div>
+  </section>
+
+  <!-- FERRAMENTAS -->
+  <section class="view" id="v-ferr">
+    <h1>Minhas <span class="gold">ferramentas</span></h1>
+    <p class="mut" style="margin-top:6px">Tudo já sai com o seu nome e o seu link de cadastro.</p>
+    <div class="stack" style="margin-top:18px" id="tools"></div>
+  </section>
+
+  <!-- MÍDIAS -->
+  <section class="view" id="v-midias">
+    <h1>Mídias <span class="gold">prontas</span></h1>
+    <p class="mut" style="margin-top:6px">Toque em uma mídia: ela sai com o seu nome e o seu WhatsApp, e a legenda já vem pronta.</p>
+    <div class="chips" style="margin-top:16px" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ACADEMIA -->
+  <section class="view" id="v-acad">
+    <h1>Academia <span class="gold">Kaiabí</span></h1>
+    <p class="mut" style="margin-top:6px">Aulas curtas e práticas para vender mais, no orgânico e com anúncios.</p>
+    <div id="trails"></div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="view" id="v-res">
+    <h1>Meus <span class="gold">resultados</span></h1>
+    <p class="mut" style="margin-top:6px">O que você já fez pelo portal.</p>
+    <div class="kpis" style="margin-top:16px" id="kpis"></div>
+    <h2>Quem viu os seus links</h2>
+    <div class="soon">
+      <h3>🚀 Chegando no próximo passo</h3>
+      <p class="mut small" style="margin-top:8px;line-height:1.5">Aqui você vai ver quantas pessoas abriram o seu convite, quantas assistiram até o fim, quem clicou no cadastro e a lista dos seus contatos interessados, com um botão para chamar cada um no WhatsApp.</p>
+    </div>
+  </section>
+</main>
+
+<nav class="tabs"><div class="in">
+  <button class="on" data-v="inicio"><i>🏠</i>Início</button>
+  <button data-v="ferr"><i>🧰</i>Ferramentas</button>
+  <button data-v="midias"><i>🖼️</i>Mídias</button>
+  <button data-v="acad"><i>🎓</i>Academia</button>
+  <button data-v="res"><i>📈</i>Resultados</button>
+</div></nav>
+
+<div id="sheet"><div class="box"><button class="x" id="sx" aria-label="Fechar">✕</button><div id="sbody"></div></div></div>
+
+<!-- primeiro acesso -->
+<div id="onb"><div class="wrap">
+  <svg class="logo" viewBox="4100 12500 12800 4660"></svg>
+  <h1>Bem-vindo ao seu <span class="gold">portal</span></h1>
+  <p class="lead">Preencha uma vez e o portal monta as suas ferramentas: apresentações com o seu link, mídias com o seu contato e as aulas para vender mais.</p>
+  <div class="perks">
+    <div class="perk"><i>🎬</i>2 apresentações narradas com o seu nome</div>
+    <div class="perk"><i>🖼️</i>Mídias prontas com o seu WhatsApp</div>
+    <div class="perk"><i>🎓</i>Aulas de divulgação orgânica e anúncios</div>
+  </div>
+  <form id="onbF">
+    <label>Seu nome</label><input class="inp" name="n" required maxlength="40" placeholder="Ex.: Lucas Rosa">
+    <label>Seu login de cadastro na Kaiabí</label><input class="inp" name="l" required placeholder="Ex.: LucasRosa ou kaiabi.com/cadastro/LucasRosa">
+    <div class="help">É o final do seu link de cadastro. Pode colar o link inteiro.</div>
+    <label>Seu WhatsApp com DDD</label><input class="inp" name="w" required inputmode="tel" placeholder="Ex.: 11 99999-9999">
+    <label>Sua cidade</label><input class="inp" name="c" placeholder="Ex.: São Paulo, SP">
+    <label>Sua frase (opcional)</label><textarea class="inp" name="f" maxlength="140" placeholder="O que a Kaiabí mudou para você, em uma frase."></textarea>
+    <label class="lgpd" style="color:var(--mut);font-weight:500"><input type="checkbox" required>Concordo em usar estes dados nas minhas ferramentas Kaiabí e em ser contatado pela equipe.</label>
+    <button class="btn g" type="submit" style="width:100%;margin-top:18px">Montar meu portal</button>
+  </form>
+</div></div>
+
+<script src="dados.js"></script>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const K=window.KP;
+const LS={get(k,d){try{return JSON.parse(localStorage.getItem('kp_'+k))??d}catch{return d}},set(k,v){try{localStorage.setItem('kp_'+k,JSON.stringify(v))}catch{}}};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const toast=m=>{const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),2200)};
+const normWa=s=>{let d=String(s||'').replace(/\D/g,'');if(d.length===10||d.length===11)d='55'+d;return d};
+const fmtWa=d=>{d=String(d||'').replace(/^55/,'');return d.length===11?`(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`:d};
+const normLogin=s=>{s=String(s||'').trim();const m=s.match(/cadastro\/([^/?#\s]+)/i);if(m)s=m[1];return s.replace(/[^\w.\-]/g,'')};
+const b64e=o=>btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const ROOT=location.origin+location.pathname.replace(/portal\/?(index\.html)?$/,'');
+let LOGO='';
+fetch('../convite/i/logo.svg').then(r=>r.text()).then(t=>{LOGO=t;const inner=t.replace(/^[\s\S]*?<svg[^>]*>/,'').replace(/<\/svg>\s*$/,'');$$('svg.logo').forEach(s=>s.innerHTML=inner)}).catch(()=>{});
+
+/* ---------- perfil ---------- */
+let ME=LS.get('perfil',null);
+const stats=LS.get('stats',{shares:0,invites:0,medias:0,lessons:0});
+const saveStats=()=>LS.set('stats',stats);
+const done=LS.get('done',{});const saveDone=()=>LS.set('done',done);
+function links(){const o={n:ME.n,l:ME.l,w:ME.w};if(ME.f)o.f=ME.f;const h='#c='+b64e(o);return{stories:ROOT+'convite/'+h,d3:ROOT+'convite/3d/'+h,inst:ROOT+'apresentacao/',plano:ROOT+'plano/',cad:'https://kaiabi.com/cadastro/'+encodeURIComponent(ME.l)}}
+function boot(){
+  if(!ME){$('#onb').classList.add('on');return}
+  $('#onb').classList.remove('on');
+  const ini=(ME.n.match(/\b\p{L}/gu)||['K']).slice(0,2).join('').toUpperCase();
+  $('#me').textContent=ini;$('#hello').textContent=ME.n.split(/\s+/)[0];
+  renderSteps();renderMission();renderTools();renderChips();renderGrid();renderTrails();renderKpis();
+}
+$('#onbF').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);
+  const w=normWa(f.get('w')),l=normLogin(f.get('l'));
+  if(!l){toast('Confira o seu login de cadastro');return}if(w.length<12){toast('Confira o seu WhatsApp com DDD');return}
+  ME={n:String(f.get('n')).trim(),l,w,c:String(f.get('c')||'').trim(),f:String(f.get('f')||'').trim()};LS.set('perfil',ME);done.perfil=1;saveDone();boot();toast('Portal montado ✨')});
+$('#me').addEventListener('click',()=>{openSheet(`<h3>Meu perfil</h3><p class="mut small" style="margin:8px 0 14px">${esc(ME.n)} · ${esc(fmtWa(ME.w))}<br>Cadastro: kaiabi.com/cadastro/${esc(ME.l)}</p><button class="btn o" id="edit" style="width:100%">Editar meus dados</button>`);$('#edit').onclick=()=>{closeSheet();const f=$('#onbF');f.n.value=ME.n;f.l.value=ME.l;f.w.value=fmtWa(ME.w);f.c.value=ME.c||'';f.f.value=ME.f||'';$('#onb').classList.add('on')}});
+
+/* ---------- abas ---------- */
+$$('nav.tabs button').forEach(b=>b.addEventListener('click',()=>{$$('nav.tabs button').forEach(x=>x.classList.toggle('on',x===b));$$('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+b.dataset.v));scrollTo(0,0);if(b.dataset.v==='res')renderKpis()}));
+const go=v=>$(`nav.tabs button[data-v="${v}"]`).click();
+
+/* ---------- início ---------- */
+const STEPS=[
+ {k:'perfil',t:'Completar meu perfil',s:'Feito no primeiro acesso'},
+ {k:'assistir',t:'Assistir à minha apresentação',s:'Veja o que o seu convidado vai ver',act:()=>{done.assistir=1;saveDone();open(links().stories,'_blank');renderSteps()}},
+ {k:'convite',t:'Enviar meu primeiro convite',s:'Para 3 pessoas da sua lista',act:()=>go('ferr')},
+ {k:'midia',t:'Publicar minha primeira mídia',s:'No status ou no Instagram',act:()=>go('midias')},
+ {k:'aula',t:'Fazer a primeira aula',s:'Seu primeiro dia, 3 minutos',act:()=>{go('acad');openLesson('c1')}},
+ {k:'site',t:'Pedir o meu site',s:'A loja que vende por você',act:()=>go('ferr')}];
+function renderSteps(){
+  const el=$('#steps');el.innerHTML=STEPS.map(s=>`<button class="chk ${done[s.k]?'done':''}" data-k="${s.k}"><span class="bx">${done[s.k]?'✓':''}</span><span class="t">${s.t}<small>${s.s}</small></span>${done[s.k]?'':'<span class="go">›</span>'}</button>`).join('');
+  el.querySelectorAll('.chk').forEach(b=>b.onclick=()=>{const s=STEPS.find(x=>x.k===b.dataset.k);s.act&&s.act()});
+  const pct=Math.round(STEPS.filter(s=>done[s.k]).length/STEPS.length*100);
+  $('#ringArc').setAttribute('stroke-dasharray',pct+' 100');$('#ringTxt').textContent=pct+'%';
+}
+const today=()=>new Date().toISOString().slice(0,10);
+function renderMission(){
+  const keys=Object.keys(K.produtos);const d=new Date();const idx=(d.getFullYear()*372+d.getMonth()*31+d.getDate())%keys.length;const k=keys[idx],p=K.produtos[k];
+  const ok=LS.get('missao_'+today(),false);
+  $('#mission').innerHTML=`<span class="tag">${ok?'✓ Missão cumprida':'Hoje'}</span><h3>Poste o ${esc(p.n)} no seu status</h3><p>A mídia já sai com o seu WhatsApp e a legenda pronta.</p><button class="btn g" id="mGo">${ok?'Postar de novo':'Cumprir a missão'}</button><img src="../apresentacao/p/p-${k}.webp" alt="">`;
+  $('#mGo').onclick=()=>openMedia(k,true);
+  const st=LS.get('streak',{n:0,last:''});$('#streak').textContent=st.n;
+}
+function missionDone(){
+  if(LS.get('missao_'+today(),false))return;LS.set('missao_'+today(),true);
+  const st=LS.get('streak',{n:0,last:''});const y=new Date(Date.now()-864e5).toISOString().slice(0,10);
+  st.n=st.last===y?st.n+1:1;st.last=today();LS.set('streak',st);renderMission();toast('🔥 Missão cumprida!');
+}
+
+/* ---------- ferramentas ---------- */
+function renderTools(){
+  const L=links();const site=LS.get('site_pedido',false);
+  const T=[
+   {ic:'📱',t:'Convite Stories',s:'Narrado, cena por cena. Ideal para o WhatsApp.',u:L.stories,msg:'Separei 3 minutos especiais pra você. Assiste com som 🎧 '},
+   {ic:'🌳',t:'Convite 3D',s:'A apresentação completa, que rola sozinha com narração.',u:L.d3,msg:'Preparei uma apresentação especial pra você. Assiste com som 🎧 '},
+   {ic:'🏛️',t:'Apresentação institucional',s:'Para quem quer ver tudo com calma.',u:L.inst,msg:'Conheça a Kaiabí: '},
+   {ic:'📄',t:'Plano de Negócios',s:'PDF para celular e computador.',u:L.plano,msg:'Aqui está o Plano de Negócios da Kaiabí: '}];
+  $('#tools').innerHTML=T.map((x,i)=>`<div class="card tool"><div class="top"><div class="ic">${x.ic}</div><div><h3>${x.t}</h3><p class="mut small" style="margin-top:3px">${x.s}</p></div></div><code>${esc(x.u)}</code><div class="row3"><button class="btn o" data-cp="${i}">Copiar</button><a class="btn o" href="${esc(x.u)}" target="_blank" rel="noopener">Ver</a><a class="btn w" data-sh="${i}" href="https://wa.me/?text=${encodeURIComponent(x.msg+x.u)}" target="_blank" rel="noopener">Enviar</a></div></div>`).join('')+
+  `<div class="card tool"><div class="top"><div class="ic">🛍️</div><div><h3>Meu site de vendas <span class="badge ${site?'wait':'ok'}">${site?'Pedido enviado':'Novo'}</span></h3><p class="mut small" style="margin-top:3px">A loja com todos os produtos, que manda o cliente direto para o seu WhatsApp.</p></div></div><a class="btn g" id="pedeSite" href="#">${site?'Ver meu pedido':'Pedir o meu site'}</a></div>
+   <div class="card tool"><div class="top"><div class="ic">🔗</div><div><h3>Meu link de cadastro</h3><p class="mut small" style="margin-top:3px">Para quem já decidiu entrar.</p></div></div><code>${esc(L.cad)}</code><button class="btn o" data-cpu="${esc(L.cad)}">Copiar</button></div>`;
+  $$('#tools [data-cp]').forEach(b=>b.onclick=()=>{navigator.clipboard?.writeText(T[+b.dataset.cp].u);toast('Link copiado');stats.shares++;saveStats()});
+  $$('#tools [data-cpu]').forEach(b=>b.onclick=()=>{navigator.clipboard?.writeText(b.dataset.cpu);toast('Link copiado')});
+  $$('#tools [data-sh]').forEach(b=>b.addEventListener('click',()=>{stats.shares++;if(+b.dataset.sh<2){stats.invites++;done.convite=1;saveDone();renderSteps()}saveStats()}));
+  $('#pedeSite').onclick=e=>{e.preventDefault();LS.set('site_pedido',true);done.site=1;saveDone();renderSteps();
+    open('https://claude.ai/artifact/TXHrgSKTzxP8Z1oME5SePj#pedir','_blank');renderTools()};
+}
+
+/* ---------- mídias ---------- */
+let filt='todos';
+function renderChips(){
+  const C=[['todos','Todos'],...Object.entries(K.grupos).map(([k,v])=>[k,v.n])];
+  $('#chips').innerHTML=C.map(([k,n])=>`<button class="chip ${k===filt?'on':''}" data-f="${k}">${n}</button>`).join('');
+  $$('#chips .chip').forEach(b=>b.onclick=()=>{filt=b.dataset.f;renderChips();renderGrid()});
+}
+function renderGrid(){
+  const items=Object.entries(K.produtos).filter(([k,p])=>filt==='todos'||p.g===filt);
+  $('#grid').innerHTML=items.map(([k,p])=>`<button class="med" style="--c:${p.c}" data-k="${k}"><span class="fm">Story</span><img loading="lazy" src="../apresentacao/p/p-${k}.webp" alt=""><span class="nm">${esc(p.n)}</span></button>`).join('');
+  $$('#grid .med').forEach(b=>b.onclick=()=>openMedia(b.dataset.k));
+}
+const loadImg=src=>new Promise((r,j)=>{const i=new Image();i.onload=()=>r(i);i.onerror=j;i.src=src});
+function wrapText(ctx,txt,x,y,maxW,lh){const words=txt.split(' ');let line='',lines=[];words.forEach(w=>{const t=line?line+' '+w:w;if(ctx.measureText(t).width>maxW&&line){lines.push(line);line=w}else line=t});lines.push(line);lines.forEach((l,i)=>ctx.fillText(l,x,y+i*lh));return lines.length}
+async function makeStory(k){
+  const p=K.produtos[k];const W=1080,H=1920;const cv=document.createElement('canvas');cv.width=W;cv.height=H;const c=cv.getContext('2d');
+  const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,p.c);g.addColorStop(.62,'#2a1229');g.addColorStop(1,'#140812');c.fillStyle=g;c.fillRect(0,0,W,H);
+  const rg=c.createRadialGradient(W/2,900,40,W/2,900,620);rg.addColorStop(0,'rgba(241,228,176,.35)');rg.addColorStop(1,'rgba(241,228,176,0)');c.fillStyle=rg;c.fillRect(0,0,W,H);
+  try{const svg=LOGO.replace(/currentColor/g,'#d6c691');const lg=await loadImg('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg));c.drawImage(lg,W/2-150,140,300,300*4660/12800)}catch(e){}
+  const im=await loadImg('../apresentacao/p/p-'+k+'.webp');const ih=920,iw=ih*im.width/im.height;
+  c.save();c.shadowColor='rgba(0,0,0,.55)';c.shadowBlur=60;c.shadowOffsetY=40;c.drawImage(im,W/2-iw/2,380,iw,ih);c.restore();
+  c.fillStyle='#fff';c.textAlign='center';c.font='800 84px Archivo, sans-serif';const n=wrapText(c,p.n,W/2,1410,940,90);
+  c.fillStyle='rgba(255,255,255,.82)';c.font='500 44px Archivo, sans-serif';wrapText(c,p.l,W/2,1410+n*90+20,900,58);
+  const by=1700;c.fillStyle='rgba(214,198,145,.96)';c.beginPath();c.roundRect?c.roundRect(90,by,W-180,150,75):c.rect(90,by,W-180,150);c.fill();
+  c.fillStyle='#2a1229';c.font='600 36px Archivo, sans-serif';c.fillText('Fale comigo no WhatsApp',W/2,by+58);
+  c.font='800 52px Archivo, sans-serif';c.fillText(ME.n.split(/\s+/)[0]+' · '+fmtWa(ME.w),W/2,by+116);
+  return cv;
+}
+const caption=k=>{const p=K.produtos[k];return `${p.n} 🌿\n${p.l}\n\nProduto natural Kaiabí, selecionado com carinho para a sua rotina.\nQuer conhecer? Me chama no WhatsApp: wa.me/${ME.w}`};
+async function openMedia(k,isMission){
+  openSheet(`<h3>${esc(K.produtos[k].n)}</h3><p class="mut small" style="margin:4px 0 0">Story 1080×1920 com o seu contato</p><canvas id="pv" style="display:none"></canvas><img id="prev" alt="Prévia"><label>Legenda pronta</label><textarea class="inp" id="cap">${esc(caption(k))}</textarea><div class="row" style="margin-top:12px"><button class="btn o" id="cpCap">Copiar legenda</button><button class="btn o" id="dl">Baixar imagem</button></div><button class="btn g" id="shr" style="width:100%;margin-top:10px">Compartilhar agora</button>`);
+  const cv=await makeStory(k);const url=cv.toDataURL('image/jpeg',.9);$('#prev').src=url;
+  const blob=await new Promise(r=>cv.toBlob(r,'image/jpeg',.9));const file=new File([blob],`kaiabi-${k}.jpg`,{type:'image/jpeg'});
+  const count=()=>{stats.medias++;stats.shares++;saveStats();done.midia=1;saveDone();renderSteps();if(isMission||true)missionDoneIf(k)};
+  $('#cpCap').onclick=()=>{navigator.clipboard?.writeText($('#cap').value);toast('Legenda copiada')};
+  $('#dl').onclick=()=>{const a=document.createElement('a');a.href=url;a.download=file.name;a.click();count()};
+  $('#shr').onclick=async()=>{navigator.clipboard?.writeText($('#cap').value).catch(()=>{});
+    if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],text:$('#cap').value});count()}catch(e){}}
+    else{const a=document.createElement('a');a.href=url;a.download=file.name;a.click();count();toast('Imagem baixada e legenda copiada')}};
+}
+function missionDoneIf(k){const keys=Object.keys(K.produtos);const d=new Date();const idx=(d.getFullYear()*372+d.getMonth()*31+d.getDate())%keys.length;if(keys[idx]===k)missionDone()}
+
+/* ---------- academia ---------- */
+const prog=LS.get('aulas',{});
+function renderTrails(){
+  $('#trails').innerHTML=Object.entries(K.trilhas).map(([t,nm])=>{const ls=K.aulas.filter(a=>a.t===t);const ok=ls.filter(a=>prog[a.id]).length;
+    return `<h2>${nm} <span class="mut small" style="font-weight:600">${ok}/${ls.length}</span></h2><div class="stack trail">${ls.map((a,i)=>`<button class="les ${prog[a.id]?'done':''}" data-id="${a.id}"><span class="n">${prog[a.id]?'✓':i+1}</span><span class="t">${esc(a.titulo)}<small>${a.min} min de leitura</small></span></button>`).join('')}</div>`}).join('');
+  $$('#trails .les').forEach(b=>b.onclick=()=>openLesson(b.dataset.id));
+}
+function openLesson(id){const a=K.aulas.find(x=>x.id===id);const ck=LS.get('ck_'+id,{});
+  openSheet(`<div class="lesson"><p class="mut small" style="margin-bottom:6px">${K.trilhas[a.t]} · ${a.min} min</p><h2 style="margin-top:0">${esc(a.titulo)}</h2>${a.txt.map(p=>`<p>${esc(p)}</p>`).join('')}<h3 style="margin:18px 0 4px">Checklist</h3>${a.check.map((c,i)=>`<label class="cl" style="color:#fff;font-size:15px;margin:0"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}>${esc(c)}</label>`).join('')}<button class="btn g" id="lok" style="width:100%;margin-top:16px">${prog[id]?'Aula concluída ✓':'Concluir aula'}</button></div>`);
+  $$('#sbody input[type=checkbox]').forEach(x=>x.onchange=()=>{ck[x.dataset.i]=x.checked;LS.set('ck_'+id,ck)});
+  $('#lok').onclick=()=>{if(!prog[id]){prog[id]=1;LS.set('aulas',prog);stats.lessons++;saveStats();done.aula=1;saveDone();renderSteps();toast('Aula concluída 🎓')}renderTrails();closeSheet()};
+}
+
+/* ---------- resultados ---------- */
+function renderKpis(){
+  const st=LS.get('streak',{n:0});const total=K.aulas.length,ok=Object.keys(prog).length;
+  $('#kpis').innerHTML=[[stats.shares,'compartilhamentos pelo portal'],[stats.invites,'convites enviados'],[stats.medias,'mídias publicadas'],[`${ok}/${total}`,'aulas concluídas'],[st.n,'dias seguidos de missão'],[Math.round(STEPS.filter(s=>done[s.k]).length/STEPS.length*100)+'%','dos primeiros passos']].map(([v,t])=>`<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join('');
+}
+
+/* ---------- folha ---------- */
+function openSheet(html){$('#sbody').innerHTML=html;$('#sheet').classList.add('on');document.body.style.overflow='hidden'}
+function closeSheet(){$('#sheet').classList.remove('on');document.body.style.overflow=''}
+$('#sx').onclick=closeSheet;$('#sheet').addEventListener('click',e=>{if(e.target.id==='sheet')closeSheet()});
+boot();
+})();
+</script>
+</body>
+</html>

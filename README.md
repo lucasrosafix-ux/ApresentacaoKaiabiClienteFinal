@@ -18,3 +18,8 @@ Duas versões narradas que terminam no link de cadastro de cada distribuidor:
 - Gerar o link: `https://apresentacao.kaiabishop.com.br/convite/` (o distribuidor preenche nome, login de cadastro, WhatsApp, frase e vídeo opcionais).
 - O link gerado leva os dados no endereço (`#c=...`), sem banco de dados.
 - O botão "Quero entrar" abre `kaiabi.com/cadastro/LOGIN`; o pop-up de saída manda nome e WhatsApp do interessado para o WhatsApp do distribuidor.
+
+## Portal do distribuidor (`/portal`)
+
+Versão 1 (sem banco): primeiro acesso, primeiros passos, missão do dia com sequência, ferramentas com os links do distribuidor, mídias prontas (story 1080×1920 gerado com o nome e WhatsApp dele + legenda), Academia (orgânico e pago) e resultados locais.
+A estrutura do banco para a versão 2 (login, CRM, métricas e leads) está em `supabase/schema.sql`.
