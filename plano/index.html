@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plano de Negócios Kaiabí 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--plum:#673367;--deep:#3a1b3a;--sand:#d6c691;--cream:#f8f4eb}
+body{background:#2a1429;color:#fbf6ee;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(14px,3vw,32px);background:rgba(42,20,41,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(214,198,145,.2)}
+header h1{font-size:clamp(15px,1.6vw,18px);font-weight:700}
+header h1 small{display:block;font-weight:500;color:#cdb9ca;font-size:12px}
+.ctl{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.seg{display:flex;background:rgba(255,255,255,.08);border-radius:99px;padding:4px}
+.seg button{border:0;background:transparent;color:#e8d9e6;font:inherit;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--sand);color:var(--deep)}
+a.dl{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--deep);background:var(--sand);font-weight:700;font-size:14px;padding:9px 16px;border-radius:99px}
+a.dl:hover{filter:brightness(1.05)}
+main{display:grid;gap:clamp(14px,2vw,26px);padding:clamp(14px,3vw,36px) clamp(10px,3vw,36px) 60px;justify-items:center}
+main img{display:block;width:100%;height:auto;border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.35);background:var(--cream)}
+main.d img{max-width:1400px}
+main.m img{max-width:520px}
+.note{max-width:900px;text-align:center;color:#cdb9ca;font-size:13px;padding:0 16px 30px;margin:0 auto}
+</style>
+</head>
+<body>
+<header>
+ <h1>Plano de Negócios Kaiabí 2026<small>12 páginas · do propósito à oferta</small></h1>
+ <div class="ctl">
+  <div class="seg" role="group" aria-label="Formato">
+   <button type="button" data-f="d" aria-pressed="true">Computador</button>
+   <button type="button" data-f="m" aria-pressed="false">Celular</button>
+  </div>
+  <a class="dl" id="dl" href="Plano-de-Negocios-Kaiabi-Computador.pdf" download>⬇ Baixar PDF</a>
+ </div>
+</header>
+<main id="pages" class="d"></main>
+<p class="note">Os dois PDFs têm o mesmo conteúdo: o de Computador é horizontal (16:9), bom para telão e reunião; o de Celular é vertical (9:16), bom para mandar no WhatsApp.</p>
+<script>
+const main=document.getElementById('pages'),dl=document.getElementById('dl');
+const set=f=>{
+ main.className=f;
+ main.innerHTML=Array.from({length:12},(_,i)=>`<img src="img/${f}-${String(i+1).padStart(2,'0')}.webp" alt="Página ${i+1} do Plano de Negócios" loading="${i<2?'eager':'lazy'}" decoding="async">`).join('');
+ dl.href=f==='d'?'Plano-de-Negocios-Kaiabi-Computador.pdf':'Plano-de-Negocios-Kaiabi-Celular.pdf';
+ dl.textContent=f==='d'?'⬇ Baixar PDF (computador)':'⬇ Baixar PDF (celular)';
+ document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.f===f)));
+};
+document.querySelector('.seg').addEventListener('click',e=>{const b=e.target.closest('button');if(b)set(b.dataset.f)});
+set(matchMedia('(max-width: 760px)').matches?'m':'d');
+let DL=null;(async()=>{try{if(window.claude&&claude.use)DL=await claude.use('downloads')}catch(e){}})();
+dl.addEventListener('click',async e=>{if(!DL)return;e.preventDefault();const href=dl.getAttribute('href');const old=dl.textContent;dl.textContent='Preparando…';
+ try{const blob=await fetch(href).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()});await DL.save({filename:href,data:blob})}catch(err){}finally{dl.textContent=old}});
+</script>
+</body>
+</html>
