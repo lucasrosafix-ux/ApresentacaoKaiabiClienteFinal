@@ -10,7 +10,10 @@ Publicação: GitHub Pages ou Cloudflare Pages apontando para a raiz do reposit�
 
 ## Convite do distribuidor (`/convite`)
 
-Apresentação em formato stories, narrada, que termina no link de cadastro de cada distribuidor.
+Duas versões narradas que terminam no link de cadastro de cada distribuidor:
+
+- `/convite/` — formato stories (cenas que passam sozinhas).
+- `/convite/3d/` — a apresentação institucional em 3D, rolando sozinha com a narração, escolha de objetivo, prova do distribuidor e barra fixa de cadastro.
 
 - Gerar o link: `https://apresentacao.kaiabishop.com.br/convite/` (o distribuidor preenche nome, login de cadastro, WhatsApp, frase e vídeo opcionais).
 - O link gerado leva os dados no endereço (`#c=...`), sem banco de dados.

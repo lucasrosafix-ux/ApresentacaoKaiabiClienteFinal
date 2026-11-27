@@ -344,13 +344,21 @@ h2{font-size:clamp(28px,8.4vw,38px);font-weight:800}
       <button class="go" type="submit" style="animation:none;width:100%;margin-top:8px">Gerar meu link</button>
     </form>
     <div id="out">
-      <b>Seu link está pronto ✨</b>
+      <b>Seus links estão prontos ✨</b>
+      <p class="help" style="margin:10px 0 2px">📱 <b>Versão Stories</b>: rápida, ideal para o WhatsApp</p>
       <code id="outUrl"></code>
       <div class="row">
         <button class="btn2" id="cpy">Copiar link</button>
         <a class="btn2" id="prev" href="#">Ver como fica</a>
       </div>
       <a class="btn2 g" id="shr" target="_blank" rel="noopener" style="display:block;margin-top:10px">Enviar pelo WhatsApp</a>
+      <p class="help" style="margin:18px 0 2px">🌳 <b>Versão 3D</b>: a apresentação completa, que rola sozinha</p>
+      <code id="outUrl3"></code>
+      <div class="row">
+        <button class="btn2" id="cpy3">Copiar link</button>
+        <a class="btn2" id="prev3" href="#" target="_blank">Ver como fica</a>
+      </div>
+      <a class="btn2 g" id="shr3" target="_blank" rel="noopener" style="display:block;margin-top:10px">Enviar pelo WhatsApp</a>
     </div>
   </div>
 </div>
@@ -580,6 +588,10 @@ function initMaker(){
     $('#prev').onclick=ev=>{ev.preventDefault();location.href=url;location.reload()};
     $('#shr').href='https://wa.me/?text='+encodeURIComponent('Separei 3 minutos especiais pra você. Assiste com som 🎧 '+url);
     $('#cpy').onclick=()=>{navigator.clipboard?.writeText(url).then(()=>{$('#cpy').textContent='Copiado ✓'})};
+    const url3=location.origin+location.pathname+'3d/#c='+b64e(o);
+    $('#outUrl3').textContent=url3;$('#prev3').href=url3;
+    $('#shr3').href='https://wa.me/?text='+encodeURIComponent('Preparei uma apresentação especial pra você. Assiste com som 🎧 '+url3);
+    $('#cpy3').onclick=()=>{navigator.clipboard?.writeText(url3).then(()=>{$('#cpy3').textContent='Copiado ✓'})};
     $('#out').scrollIntoView({behavior:'smooth'});
   });
 }
