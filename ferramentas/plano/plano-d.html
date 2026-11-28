@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><title>Plano de Negócios Kaiabí 2026</title>
+<style>:root{--W:1600px;--H:900px}@page{size:1600px 900px;margin:0}*{box-sizing:border-box;margin:0;padding:0}
+:root{--plum:#673367;--deep:#3a1b3a;--sand:#d6c691;--sand2:#efe6c8;--green:#017761;--cream:#f8f4eb;--ink:#2a1429;--mute:#6b5a6a;--line:rgba(103,51,103,.16)}
+html,body{background:#ddd}
+body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pg{width:var(--W);height:var(--H);position:relative;overflow:hidden;background:var(--cream);padding:72px 88px 80px;display:flex;flex-direction:column;gap:22px;page-break-after:always;break-after:page}
+.pg::before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(214,198,145,.35),transparent 70%)}
+.pg.dark{background:var(--deep);color:#fbf6ee}
+h1,h2,h3{font-family:"Inter Display","Inter",sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.04}
+h1{font-size:76px;max-width:15ch}
+h2{font-size:50px;max-width:22ch}
+h2 em,h1 em{font-style:normal;color:var(--plum)}
+.dark h2 em{color:var(--sand)}
+h3{font-size:30px}
+.kick{font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.dark .kick{color:var(--sand)}
+.lead{font-size:22px;line-height:1.45;color:var(--mute);max-width:62ch}
+.lead.sm{font-size:19px}
+.dark .lead{color:#e8d9e6}
+p{line-height:1.45}
+.pf{position:absolute;left:88px;right:88px;bottom:28px;display:flex;justify-content:space-between;font-size:14px;color:var(--mute);border-top:1px solid var(--line);padding-top:12px}
+.dark .pf{color:#c9b7c7;border-color:rgba(255,255,255,.15)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.g2.wide{grid-template-columns:1.45fr 1fr}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:8px;box-shadow:0 10px 30px rgba(58,27,58,.06)}
+.card b{font-size:23px}.card p{color:var(--mute);font-size:18px}
+.nb{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--plum);color:var(--sand);font-weight:800;font-size:20px}
+.nb.sm{width:30px;height:30px;font-size:15px;flex:none}
+.pots{display:flex;justify-content:center;align-items:flex-end;gap:26px;margin-top:auto;height:220px}
+.pots img{height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(58,27,58,.25))}
+.pots img:nth-child(3){height:118%}
+/* capa */
+.cover{padding:0;justify-content:center}
+.cover .cbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(58,27,58,.95) 30%,rgba(58,27,58,.35))}
+.cin{position:relative;z-index:1;padding:0 110px;display:grid;gap:26px}
+.logo{width:260px;height:auto;color:var(--sand)}
+.cover .lead{font-size:24px;max-width:48ch}
+/* planos */
+.plan{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px 26px;display:grid;gap:14px;position:relative;align-content:start}
+.plan.top{background:var(--plum);color:#fff;border-color:var(--plum);box-shadow:0 18px 40px rgba(103,51,103,.35)}
+.plan .tag{position:absolute;top:-14px;left:26px;background:var(--sand);color:var(--deep);font-weight:800;font-size:14px;padding:6px 14px;border-radius:99px}
+.pn{font-size:26px}
+.pr strong{font-family:"Inter Display";font-size:44px;font-weight:800;color:var(--plum)}
+.plan.top .pr strong{color:var(--sand)}
+.pr s{margin-left:10px;font-size:20px;color:var(--mute)}.plan.top .pr s{color:#dcc9da}
+.plan ul{list-style:none;display:grid;gap:8px}
+.plan li{display:flex;justify-content:space-between;gap:10px;font-size:17px;border-top:1px solid var(--line);padding-top:8px}
+.plan.top li{border-color:rgba(255,255,255,.2)}
+.plan li b.no{color:#b04a5a;font-weight:600}.plan.top li b.no{color:#ffb3c0}
+/* regras */
+.rule{padding:18px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.rule b{font-size:22px;color:var(--plum)}.rule p{font-size:18px;color:var(--mute)}
+.safe{background:rgba(1,119,97,.08);border:2px solid var(--green);border-radius:24px;padding:30px;display:grid;gap:14px}
+.safe b{font-size:26px;color:var(--green)}
+.safe span{position:relative;padding-left:34px;font-size:18px}
+.safe span::before{content:"";position:absolute;left:4px;top:.3em;width:16px;height:9px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+/* movimentos */
+.mov{background:#fff;border-radius:24px;padding:24px;border:1px solid var(--line);display:grid;gap:6px;align-content:start}
+.mov h3{color:var(--plum)}.mov small{font-size:15px;color:var(--green);font-weight:700}
+.mov ul{list-style:none;display:grid;gap:12px;margin-top:8px}
+.mov li{display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--line);padding-top:12px}
+.mov li div{flex:1}.mov li b{font-size:18px}.mov li p{font-size:15px;color:var(--mute)}
+.mov li strong{font-size:18px;color:var(--plum);white-space:nowrap}
+/* tabelas */
+.tb{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line);font-size:17px}
+.tb th{background:var(--plum);color:#fff;text-align:left;padding:12px 14px;font-size:14px;font-weight:700;letter-spacing:.02em}
+.tb td{padding:11px 14px;border-top:1px solid var(--line);white-space:nowrap}
+.tb tr:nth-child(even) td{background:#fbf8f1}
+.tb tr.tot td{font-weight:800;color:var(--plum);background:var(--sand2)}
+.tb td i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.tb td.hl{font-weight:800;color:var(--green)}
+.fn{font-size:14px;color:var(--mute);margin-top:12px;max-width:110ch}
+.notes .rule:first-child{padding-top:0}
+/* degraus */
+.stairs{display:flex;align-items:flex-end;gap:8px;height:520px}
+.st{flex:1;height:var(--h);background:linear-gradient(180deg,var(--c),color-mix(in srgb,var(--c) 60%,#3a1b3a));border-radius:12px 12px 4px 4px;position:relative}
+.st span{position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%) rotate(-55deg);transform-origin:left bottom;white-space:nowrap;font-size:14px;font-weight:700;color:var(--ink)}
+/* diferença */
+.diff{display:grid;gap:20px}
+.ex{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:grid;gap:14px}
+.pill{display:inline-block;padding:10px 18px;border-radius:99px;background:color-mix(in srgb,var(--c) 18%,#fff);border:2px solid var(--c);font-weight:700;font-size:18px}
+.exr:nth-child(2){padding-left:44px;position:relative}.exr:nth-child(2)::before{content:"";position:absolute;left:18px;top:-14px;width:18px;height:36px;border-left:2px solid var(--line);border-bottom:2px solid var(--line);border-bottom-left-radius:10px}
+.exr.res{font-size:19px;padding-top:10px;border-top:1px solid var(--line)}.exr.res strong{color:var(--green);font-size:24px}
+/* simulação */
+.bars{display:flex;align-items:flex-end;gap:14px;height:330px;padding-top:30px}
+.bar{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}
+.bar i{display:block;width:100%;height:var(--h);background:linear-gradient(180deg,var(--sand),var(--plum));border-radius:10px 10px 3px 3px}
+.bar b{font-size:14px;color:var(--plum);white-space:nowrap}.bar span{font-weight:700}
+.sim .tb{font-size:15px}.sim .tb td,.sim .tb th{padding:9px 10px}
+/* final */
+.end{justify-content:center}
+.go{list-style:none;counter-reset:g;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+.go li{counter-increment:g;background:rgba(255,255,255,.07);border:1px solid rgba(214,198,145,.35);border-radius:22px;padding:26px;display:grid;gap:8px}
+.go li::before{content:counter(g);font-family:"Inter Display";font-weight:800;font-size:38px;color:var(--sand)}
+.go b{font-size:24px}.go span{color:#e8d9e6;font-size:18px}
+.cta{font-size:28px;font-weight:700;color:var(--sand);margin-top:16px}
+.legal{font-size:14px;color:#c9b7c7;max-width:100ch}
+.endlogo{position:absolute;right:88px;top:70px}.endlogo .logo{width:170px}
+
+/* ===== MOBILE (9:16) ===== */
+.m .pg{padding:46px 34px 64px;gap:16px}
+.m .pg::before{width:300px;height:300px;right:-120px;top:-120px}
+.m .pf{left:34px;right:34px;bottom:20px;font-size:11px;padding-top:8px}
+.m h1{font-size:46px}.m h2{font-size:33px}.m h3{font-size:22px}
+.m .kick{font-size:13px}
+.m .lead,.m .lead.sm{font-size:16.5px}
+.m .g2,.m .g2.wide,.m .g3{grid-template-columns:1fr;gap:14px}
+.m .cin{padding:0 38px;align-self:end;margin-bottom:90px;gap:18px}.m .logo{width:190px}.m .cover .lead{font-size:17px}
+.m .cover::after{background:linear-gradient(0deg,rgba(58,27,58,.96) 45%,rgba(58,27,58,.3))}
+.m .card{padding:16px 18px;gap:4px;border-radius:18px}.m .card b{font-size:19px}.m .card p{font-size:15px}.m .nb{width:32px;height:32px;font-size:16px}
+.m .pots{height:170px;gap:10px}
+.m .plans{gap:12px}.m .plan{padding:16px 18px;gap:6px;grid-template-columns:1fr auto;align-items:center;border-radius:18px}
+.m .plan ul{grid-column:1/-1;grid-template-columns:1fr;gap:3px}.m .plan li{font-size:13.5px;padding-top:4px}
+
+.m .pn{font-size:19px}.m .pr strong{font-size:26px}.m .pr{text-align:right}.m .pr s{display:block;margin:0;font-size:13px}.m .plan .tag{font-size:11px;top:-11px}
+.m .rule{padding:12px 0;gap:4px}.m .rule b{font-size:18px}.m .rule p{font-size:15px}
+.m .safe{padding:18px;gap:10px;border-radius:18px}.m .safe b{font-size:20px}.m .safe span{font-size:15px;padding-left:28px}
+.m .movs{gap:10px}.m .mov{padding:14px 16px;border-radius:18px;gap:2px}.m .mov ul{gap:6px;margin-top:2px}.m .mov li{padding-top:6px;gap:8px}.m .mov li b{font-size:15px}.m .mov li p{display:none}.m .mov li strong{font-size:15px}.m .mov small{font-size:12px}.m .nb.sm{width:24px;height:24px;font-size:12px}
+.m .tb{font-size:14px;border-radius:14px}.m .tb th{font-size:11px;padding:8px 8px}.m .tb td{padding:8px 8px}
+.m .car .tb th:nth-child(5),.m .car .tb td:nth-child(5){display:none}
+.m .stairs{display:none}
+.m .fn{font-size:11.5px}
+.m .sim .tb th:nth-child(4),.m .sim .tb td:nth-child(4),.m .sim .tb th:nth-child(5),.m .sim .tb td:nth-child(5),.m .sim .tb th:nth-child(6),.m .sim .tb td:nth-child(6){display:none}
+.m .sim .tb{font-size:14px}.m .bars{height:220px;gap:8px;padding-top:24px}.m .bar b{font-size:11px}
+.m .ex{padding:16px;gap:10px}.m .pill{font-size:15px;padding:8px 14px}.m .exr.res{font-size:15px}.m .exr.res strong{font-size:19px}
+.m .go{grid-template-columns:1fr;gap:12px}.m .go li{padding:16px 18px;gap:4px}.m .go li::before{font-size:26px}.m .go b{font-size:19px}.m .go span{font-size:15px}
+.m .cta{font-size:20px}.m .legal{font-size:11.5px}
+.m .endlogo{right:34px;top:44px}.m .endlogo .logo{width:120px}
+/* ===== v2 hormozi ===== */
+.dream .card b{font-size:24px;color:var(--plum)}
+.stats{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:18px;margin-top:6px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:grid;gap:6px;align-content:start}
+.stat strong{font-family:"Inter Display";font-weight:800;font-size:52px;color:var(--plum);line-height:1}
+.stat span{font-size:17px;color:var(--mute)}
+.stat.big{grid-row:span 2;background:var(--plum);border-color:var(--plum)}
+.stat.big strong{font-size:96px;color:var(--sand)}.stat.big span{color:#f0e3ee;font-size:21px}
+.pgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:6px}
+.pc{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 14px 18px;display:grid;justify-items:center;gap:4px;text-align:center}
+.pc img{height:170px;width:auto;object-fit:contain;margin-bottom:6px;filter:drop-shadow(0 10px 12px rgba(58,27,58,.2))}
+.pc b{font-size:16px;line-height:1.2;min-height:2.4em}.pc span{font-weight:800;font-size:20px;color:var(--plum)}.pc em{font-style:normal;font-size:14px;color:var(--green);font-weight:700}
+.five{margin-top:8px;background:var(--plum);color:#fbf6ee;border-radius:22px;padding:24px 28px;font-size:20px;line-height:1.45}
+.five strong{color:var(--sand)}.five span{font-family:"Inter Display";font-weight:800;font-size:28px;color:#fff}
+.mov small{font-size:14px}
+.stack{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.si{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:grid;gap:2px}
+.si b{font-size:17px;color:var(--plum)}.si span{font-size:14px;color:var(--mute)}
+.pv span,.pr span{font-size:14px;color:var(--mute);display:block}
+.pv strong{font-size:22px;color:var(--green)}
+.plan.top .pv span,.plan.top .pr span{color:#e2cfe0}.plan.top .pv strong{color:#9fe0c9}
+.plans .plan{gap:10px}.plans .pr strong{font-size:38px}
+.safe.dk{background:rgba(1,119,97,.18);border-color:#2aa88a;padding:20px 26px}
+.safe.dk span{color:#f2e8f0}.safe.dk span::before{border-color:#7fe0bf}
+.end{gap:16px}
+/* mobile v2 */
+.m .stats{grid-template-columns:1fr 1fr;gap:10px}.m .stat{padding:14px 16px;border-radius:16px}.m .stat strong{font-size:34px}.m .stat span{font-size:13.5px}
+.m .stat.big{grid-column:1/-1;grid-row:auto}.m .stat.big strong{font-size:56px}.m .stat.big span{font-size:16px}
+.m .pgrid{grid-template-columns:repeat(3,1fr);gap:10px}.m .pc{padding:10px 8px 12px;border-radius:14px}.m .pc img{height:96px}.m .pc b{font-size:12.5px}.m .pc span{font-size:15px}.m .pc em{font-size:11.5px}
+.m .five{font-size:15.5px;padding:16px 18px;border-radius:16px}.m .five span{font-size:21px}
+.m .stack{grid-template-columns:1fr 1fr;gap:8px}.m .si{padding:10px 12px;border-radius:12px}.m .si b{font-size:14px}.m .si span{font-size:12px}
+.m .stack .si:last-child{grid-column:1/-1}
+.m .plans .pr strong{font-size:24px}.m .pv strong{font-size:16px}.m .pv span,.m .m .pr span{font-size:11px}
+.m .plan .pv{grid-column:1/-1;order:3}
+.m .safe.dk{padding:14px 16px;gap:8px}.m .safe.dk span{font-size:14px}
+.m .dream .card b{font-size:19px}
+.m .plans .plan ul li:nth-child(2),.m .plans .plan ul li:nth-child(5){display:none}
+.m .plans .plan .pv{order:0;grid-column:1/-1;display:flex;gap:6px;align-items:baseline}
+.m .plans .plan{padding:12px 16px;gap:4px}
+.m .plans{gap:10px}
+.m .stack{gap:6px}.m .si{padding:8px 10px}
+</style></head>
+<body class="d"><section class="pg cover dark">
+      <img class="cbg" src="hero.jpg" alt="">
+      <div class="cin"><svg class="logo" role="img" aria-label="Kaiabí" viewBox="4100 12500 12800 4660" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" d="M 4149,15046 L 4154,17103 4563,17107 4563,16257 5131,16257 5131,16257 C 5588,16257 5748,16744 5839,17103 L 6335,17103 6335,17103 C 6129,16527 5937,16140 5588,16048 L 5588,16048 C 5974,15844 6067,15526 6114,15040 L 5690,15046 5690,15046 C 5588,15500 5570,15828 5058,15926 L 4563,15926 4563,15041 4149,15046 Z M 7836,15041 L 6897,17103 7330,17103 7495,16769 8076,15536 8456,16396 7671,16396 7492,16764 8616,16757 8076,15536 8616,16757 8795,17103 9255,17103 8309,15041 7836,15041 Z M 9772,17103 L 10268,17103 10268,15041 9772,15041 9772,17103 Z M 16116,17103 L 16612,17103 16612,15041 16116,15041 16116,17103 Z M 13629,15041 L 14049,15041 14049,15412 14697,15412 14697,15412 C 15136,15433 15153,15908 14697,15908 L 14049,15908 14049,15041 14697,15041 14697,15041 C 15479,15057 15750,15716 15196,16060 L 15196,16060 C 15764,16381 15640,17092 15041,17103 L 14049,17103 14049,16784 14697,16784 14697,16784 C 15278,16784 15206,16268 14697,16268 L 14049,16268 14049,17103 13629,17103 13629,15041 Z M 16343,14623 L 16116,14899 16629,14899 16839,14631 16343,14623 Z M 10346,13936 L 10346,14334 10346,14334 C 10406,14334 10462,14282 10462,14244 L 10462,13977 10462,13977 C 10452,13860 10346,13901 10346,13936 Z M 10150,13973 L 10150,13973 C 9954,13743 9726,13704 9318,13719 L 9318,13719 C 9211,13719 9241,13842 9271,13904 L 9271,13904 C 9296,13978 9361,14029 9478,14054 L 10072,14063 10072,14063 C 10128,14058 10172,14041 10150,13973 Z M 10046,14351 L 10046,14351 C 10343,14424 10230,14607 10194,14607 L 10194,14607 C 9973,14729 9226,14480 8878,14593 L 8878,14593 C 8768,14629 9046,14107 10046,14351 Z M 10629,14481 L 10629,14481 C 10550,14506 10551,14610 10666,14646 L 10666,14646 C 11149,14641 11602,14769 11878,14549 L 11878,14549 C 11907,14533 11920,14466 11878,14441 L 11878,14441 C 11164,14185 11297,14228 10629,14481 Z M 10711,14051 L 10711,14051 C 10691,14079 10698,14117 10732,14108 L 10732,14108 C 11011,14032 11671,14069 11851,13762 L 11851,13762 C 11903,13651 11858,13593 11740,13575 L 11740,13575 C 11330,13536 11007,13724 10711,14051 Z M 10626,13564 L 10626,13564 C 10587,13642 10649,13695 10715,13647 L 10715,13647 C 10877,13488 11176,13297 11276,13075 L 11276,13075 C 11281,12960 11231,12923 11130,12959 L 11130,12959 C 11004,13017 10899,13108 10813,13232 L 10626,13564 Z M 10308,13534 L 10308,13534 C 10332,13647 10408,13668 10436,13548 L 10436,13548 C 10471,13298 10593,13048 10543,12798 L 10543,12798 C 10541,12726 10511,12674 10447,12627 L 10447,12627 C 10381,12572 10331,12577 10300,12676 L 10300,12676 C 10228,12946 10239,13234 10308,13534 Z M 10209,13675 L 10209,13675 C 10227,13719 10205,13746 10141,13720 L 10141,13720 C 9971,13623 9823,13519 9720,13400 L 9720,13400 C 9660,13324 9634,13257 9569,13179 L 9569,13179 C 9546,13105 9575,13080 9658,13108 L 9658,13108 C 9886,13212 10070,13399 10209,13675 Z M 11752,15041 L 10813,17103 11246,17103 11411,16769 11992,15536 12372,16396 11587,16396 11408,16764 12532,16757 11992,15536 12532,16757 12711,17103 13171,17103 12225,15041 11752,15041 Z"/></svg>
+        <p class="kick">Plano de Negócios 2026</p>
+        <h1>Saúde para a sua família. Uma renda que cresce com quem você ajuda.</h1>
+        <p class="lead">Uma floresta não cresce de uma árvore só. Veja como cuidar de quem você ama, conquistar a sua independência e ganhar com a Kaiabí, em regras claras e por escrito.</p>
+      </div></section><section class="pg ">
+      <p class="kick">Para onde você vai</p>
+      <h2>Saúde em casa. <em>Independência para a sua vida.</em></h2>
+      <p class="lead">A Kaiabí escolhe a dedo produtos naturais para cuidar de quem você ama e abre um caminho de renda para quem compartilha esse cuidado. Quem constrói, colhe.</p>
+      <div class="g3 dream">
+        <div class="card"><b>Cuidar da família</b><p>Tudo o que a sua casa consome com até 50% de desconto.</p></div>
+        <div class="card"><b>Uma renda extra</b><p>Lucro em cada venda e bônus sobre as pessoas que você indica.</p></div>
+        <div class="card"><b>Um negócio próprio</b><p>Uma rede que cresce, graduações e bônus todo mês.</p></div>
+      </div>
+      <div class="pots"><img src="p-calmais.webp" alt=""><img src="p-omega.webp" alt=""><img src="p-curcu.webp" alt=""><img src="p-protector.webp" alt=""><img src="p-antipar.webp" alt=""></div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>2</span></footer></section><section class="pg ">
+      <p class="kick">Por que agora</p>
+      <h2>O mercado já existe. <em>Só falta você nele.</em></h2>
+      <div class="stats">
+        <div class="stat big"><strong>R$ 50 bi</strong><span>movimentados pela venda direta no Brasil em 2024, crescendo 6,5% no ano.</span></div>
+        <div class="stat"><strong>7º</strong><span>maior mercado de venda direta do mundo. O Brasil lidera a América Latina.</span></div>
+        <div class="stat"><strong>3,1 mi</strong><span>de revendedores ativos no país.</span></div>
+        <div class="stat"><strong>76%</strong><span>conciliam a venda direta com outro trabalho. Não precisa largar o emprego.</span></div>
+        <div class="stat"><strong>80%</strong><span>das vendas do setor já acontecem pelo WhatsApp. O seu celular é a sua loja.</span></div>
+      </div>
+      <p class="fn">Fontes: ABEVD; ABEVD/WFDSA; Pesquisa Perfil da Força de Vendas ABEVD/Bare International.</p>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>3</span></footer></section><section class="pg ">
+      <p class="kick">O veículo</p>
+      <h2>Produtos que a sua família usa primeiro. <em>E indica com orgulho.</em></h2>
+      <p class="lead sm">Os melhores produtos naturais para a rotina da casa: sono, foco, imunidade, articulações, energia, leveza, pele e cabelo. Você compra com até 50% de desconto e revende pelo preço de tabela.</p>
+      <div class="pgrid"><div class="pc"><img src="p-curcu.webp" alt=""><b>CURCU+</b><span>R$ 146</span><em>lucro até R$ 73</em></div><div class="pc"><img src="p-omega.webp" alt=""><b>Ômega Super DHA & EPA</b><span>R$ 204</span><em>lucro até R$ 102</em></div><div class="pc"><img src="p-calmais.webp" alt=""><b>Calmais</b><span>R$ 149</span><em>lucro até R$ 74,50</em></div><div class="pc"><img src="p-protector.webp" alt=""><b>Protector</b><span>R$ 184</span><em>lucro até R$ 92</em></div><div class="pc"><img src="p-magseven.webp" alt=""><b>Mag Seven</b><span>R$ 159,90</span><em>lucro até R$ 79,95</em></div><div class="pc"><img src="p-lithokit.webp" alt=""><b>LithoKit</b><span>R$ 227</span><em>lucro até R$ 113,50</em></div></div>
+      <p class="fn">Preços de tabela. Lucro calculado com 50% de desconto (Empreendedor e Diretor). Suplementos alimentares não são medicamentos.</p>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>4</span></footer></section><section class="pg ">
+      <p class="kick">Como funciona</p>
+      <h2>Saúde pega. <em>Começa em você.</em></h2>
+      <p class="lead">Quem usa, inspira. Você cuida da sua casa com desconto, e quem convive com você quer o mesmo.</p>
+      <div class="g3 steps">
+        <div class="card"><span class="nb">1</span><b>Você usa</b><p>Os produtos entram na rotina da sua casa com até 50% de desconto.</p></div>
+        <div class="card"><span class="nb">2</span><b>Os seus perguntam</b><p>Família e amigos veem a sua nova rotina e querem também.</p></div>
+        <div class="card"><span class="nb">3</span><b>Eles entram</b><p>Compram com desconto e fazem o mesmo com as pessoas deles.</p></div>
+      </div>
+      <div class="five"><strong>Seu trabalho cabe numa frase:</strong> <span>5 pessoas, bem cuidadas.</span> Escolha 5, seja a referência para elas e caminhe junto até cada uma ter as suas 5.</div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>5</span></footer></section><section class="pg ">
+      <p class="kick">Como se ganha</p>
+      <h2>Nove formas de ganhar, <em>em três movimentos.</em></h2>
+      <p class="lead">Comece pelo primeiro: vender o que você já usa dá lucro já na primeira venda. Os outros vêm com o tempo, conforme a sua rede cresce.</p>
+      <div class="g3 movs"><div class="mov"><h3>Vender</h3><small>Seu primeiro ganho: já na primeira venda</small><ul><li><span class="nb sm">1</span><div><b>Lucro sobre vendas</b><p>Compre com desconto e revenda pelo preço de tabela.</p></div><strong>40% a 50%</strong></li><li><span class="nb sm">2</span><div><b>Link de loja</b><p>Sobre as compras do cliente final no seu link.</p></div><strong>25%</strong></li><li><span class="nb sm">3</span><div><b>Cliente VIP</b><p>Sobre o valor líquido das compras dos VIP que você indicou.</p></div><strong>25%</strong></li></ul></div><div class="mov"><h3>Indicar</h3><small>Empreendedor e Diretor</small><ul><li><span class="nb sm">4</span><div><b>Bônus de ativação</b><p>Por pessoa ativa na sua rede, até a 5ª geração.</p></div><strong>R$ 8</strong></li><li><span class="nb sm">5</span><div><b>Início rápido</b><p>Soma das 5 gerações do Diretor sobre a pontuação da equipe.</p></div><strong>até 45,4%</strong></li><li><span class="nb sm">6</span><div><b>Venda de kit</b><p>Sobre o kit de adesão de quem você indica.</p></div><strong>27%</strong></li></ul></div><div class="mov"><h3>Liderar</h3><small>Empreendedor e Diretor</small><ul><li><span class="nb sm">7</span><div><b>Plano de carreira</b><p>Sobre o volume da sua rede, por diferença.</p></div><strong>5% a 20%</strong></li><li><span class="nb sm">8</span><div><b>Liderança Elite</b><p>Sobre os Elites que você forma, em 3 gerações.</p></div><strong>3%, 2%, 1%</strong></li><li><span class="nb sm">9</span><div><b>Continental</b><p>Fatia da pontuação global em brindes ao topo.</p></div><strong>5% global</strong></li></ul></div></div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>6</span></footer></section><section class="pg ">
+      <p class="kick">Bônus da rede, geração a geração</p>
+      <h2>A cada pessoa ativa, <em>você ganha. Todo mês.</em></h2>
+      <div class="g2 wide">
+        <table class="tb"><thead><tr><th>Geração</th><th>Ativação por pessoa ativa</th><th>Início rápido Diretor Pró+</th><th>Início rápido Empreendedor</th></tr></thead>
+        <tbody><tr><td>1ª</td><td>R$ 8</td><td>20%</td><td>10%</td></tr><tr><td>2ª</td><td>R$ 8</td><td>10%</td><td>6%</td></tr><tr><td>3ª</td><td>R$ 8</td><td>6,5%</td><td>6%</td></tr><tr><td>4ª</td><td>R$ 8</td><td>5,4%</td><td>—</td></tr><tr><td>5ª</td><td>R$ 8</td><td>3,5%</td><td>—</td></tr><tr class="tot"><td>Total</td><td>até a 5ª</td><td>45,4%</td><td>22%</td></tr></tbody></table>
+        <div class="notes">
+          <div class="rule"><b>Ativação do mês</b><p>Os primeiros R$ 100 em produtos do mês ativam a pessoa, em preço cheio. Acima disso vale o desconto (50% no Empreendedor e no Diretor, 40% no Starter).</p></div>
+          <div class="rule"><b>Pontos</b><p>Cada R$ 3 pagos geram 1 ponto, e cada ponto vale R$ 1. Quem compra R$ 200 paga R$ 150 e gera 50 pontos.</p></div>
+          <div class="rule"><b>Venda de kit</b><p>27% sobre o kit de quem você indica: R$ 340 no Diretor, R$ 151 no Empreendedor e R$ 76 no Starter.</p></div>
+        </div>
+      </div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>7</span></footer></section><section class="pg ">
+      <p class="kick">Simulação 5 × 5</p>
+      <h2>Quando cada pessoa ensina as suas 5 <em>a fazer o mesmo.</em></h2>
+      <p class="lead sm">Plano Diretor Pró+, cada pessoa da rede comprando R$ 200 por mês e indicando 5. Valores mensais.</p>
+      <div class="g2 wide sim">
+        <table class="tb"><thead><tr><th>Rede até a</th><th>Pessoas</th><th>Ativação</th><th>Início rápido</th><th>Carreira</th><th>Economia</th><th>Total/mês</th><th>Graduação</th></tr></thead><tbody><tr><td>1ª</td><td>5</td><td>R$ 40</td><td>R$ 50</td><td>R$ 0</td><td>R$ 50</td><td class="hl">R$ 140</td><td>—</td></tr><tr><td>2ª</td><td>30</td><td>R$ 240</td><td>R$ 175</td><td>R$ 0</td><td>R$ 50</td><td class="hl">R$ 465</td><td>—</td></tr><tr><td>3ª</td><td>155</td><td>R$ 1.240</td><td>R$ 581</td><td>R$ 624</td><td>R$ 50</td><td class="hl">R$ 2.495</td><td>Prata</td></tr><tr><td>4ª</td><td>780</td><td>R$ 6.240</td><td>R$ 2.269</td><td>R$ 2.347</td><td>R$ 50</td><td class="hl">R$ 10.906</td><td>Rubi</td></tr><tr><td>5ª</td><td>3.905</td><td>R$ 31.240</td><td>R$ 7.738</td><td>R$ 2</td><td>R$ 50</td><td class="hl">R$ 39.030</td><td>Rubi</td></tr></tbody></table>
+        <div class="bars"><div class="bar"><b>R$ 140</b><i style="--h:4.0%"></i><span>1ª</span></div><div class="bar"><b>R$ 465</b><i style="--h:4.0%"></i><span>2ª</span></div><div class="bar"><b>R$ 2.495</b><i style="--h:6.4%"></i><span>3ª</span></div><div class="bar"><b>R$ 10.906</b><i style="--h:27.9%"></i><span>4ª</span></div><div class="bar"><b>R$ 39.030</b><i style="--h:100.0%"></i><span>5ª</span></div></div>
+      </div>
+      <p class="fn">Ilustração com as regras do plano e toda a rede ativa. Na entrada dos seus 5 indicados há ainda R$ 756 de bônus de kit, uma única vez. Na 5ª geração a carreira por diferença cai porque a equipe abaixo também está graduada. Não é promessa de ganho: o resultado depende do trabalho de cada um.</p>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>8</span></footer></section><section class="pg ">
+      <p class="kick">Plano de carreira</p>
+      <h2>Cada degrau tem <em>nome, meta e prêmio.</em></h2>
+      <div class="g2 wide car">
+        <div><table class="tb"><thead><tr><th>Graduação</th><th>Pontos no mês</th><th>Ativos diretos</th><th>Bônus</th><th>VME por linha</th><th>Bônus estimado/mês*</th></tr></thead><tbody><tr><td><i style="background:#a8653f"></i>Bronze</td><td>2.000</td><td>4</td><td>5%</td><td>50%</td><td>≈ R$ 100</td></tr><tr><td><i style="background:#9aa0a8"></i>Prata</td><td>6.000</td><td>4</td><td>8%</td><td>50%</td><td>≈ R$ 480</td></tr><tr><td><i style="background:#c39a3a"></i>Ouro</td><td>15.000</td><td>4</td><td>11%</td><td>40%</td><td>≈ R$ 1.650</td></tr><tr><td><i style="background:#c8344a"></i>Rubi</td><td>30.000</td><td>5</td><td>14%</td><td>40%</td><td>≈ R$ 4.200</td></tr><tr><td><i style="background:#2b9fc4"></i>Diamante</td><td>60.000</td><td>6</td><td>20%</td><td>30%</td><td>≈ R$ 12.000</td></tr><tr><td><i style="background:#2b9fc4"></i>Duplo Diamante</td><td>200.000</td><td>8</td><td>20%</td><td>25%</td><td>≈ R$ 40.000</td></tr><tr><td><i style="background:#2b9fc4"></i>Triplo Diamante</td><td>600.000</td><td>12</td><td>20%</td><td>25%</td><td>≈ R$ 120.000</td></tr><tr><td><i style="background:#3d8f98"></i>Ônix</td><td>1.500.000</td><td>12</td><td>20%</td><td>20%</td><td>≈ R$ 300.000</td></tr><tr><td><i style="background:#2a6d74"></i>Imperial Ônix</td><td>3.000.000</td><td>12</td><td>20%</td><td>20%</td><td>≈ R$ 600.000</td></tr></tbody></table>
+        <p class="fn">* Estimativa no mínimo de pontos de cada graduação (pontos × percentual; 1 ponto = R$ 1), antes de descontar as graduações da sua equipe. Não é garantia de ganho. VME = volume máximo que conta de uma única linha.</p></div>
+        <div class="stairs"><div class="st" style="--h:18%;--c:#a8653f"><span>Bronze</span></div><div class="st" style="--h:28%;--c:#9aa0a8"><span>Prata</span></div><div class="st" style="--h:38%;--c:#c39a3a"><span>Ouro</span></div><div class="st" style="--h:48%;--c:#c8344a"><span>Rubi</span></div><div class="st" style="--h:58%;--c:#2b9fc4"><span>Diamante</span></div><div class="st" style="--h:68%;--c:#2b9fc4"><span>Duplo Diam.</span></div><div class="st" style="--h:78%;--c:#2b9fc4"><span>Triplo Diam.</span></div><div class="st" style="--h:88%;--c:#3d8f98"><span>Ônix</span></div><div class="st" style="--h:98%;--c:#2a6d74"><span>Imperial Ônix</span></div></div>
+      </div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>9</span></footer></section><section class="pg ">
+      <p class="kick">Como a carreira é paga</p>
+      <h2>Por diferença: <em>ninguém recebe duas vezes pelo mesmo ponto.</em></h2>
+      <div class="g2">
+        <div class="diff">
+          <p class="lead sm">Cada pessoa recebe o percentual da própria graduação. Quem está acima recebe só a diferença. É o único bônus sem limite de profundidade.</p>
+          <div class="ex"><div class="exr"><span class="pill" style="--c:#c39a3a">Você · Ouro 11%</span></div>
+          <div class="exr"><span class="pill" style="--c:#a8653f">Sua indicada · Bronze 5%</span></div>
+          <div class="exr res"><b>Nos pontos da linha dela:</b> ela recebe 5% e você recebe 11% − 5% = <strong>6%</strong>.</div></div>
+        </div>
+        <div>
+          <div class="rule"><b>Liderança Elite</b><p>De Diamante para cima, você é Elite e ganha sobre os Elites que você forma: 3% na 1ª geração, 2% na 2ª e 1% na 3ª.</p></div>
+          <div class="rule"><b>Bônus Continental</b><p>A Kaiabí separa 5% da pontuação global da rede, em brindes, para o topo: Duplo Diamante 20%, Triplo Diamante 30%, Ônix e Imperial Ônix 50%.</p></div>
+          <div class="rule"><b>Pontuação do mês</b><p>Conta adesão, recompra, upgrade e loja virtual, sem acumular de um mês para o outro.</p></div>
+        </div>
+      </div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>10</span></footer></section><section class="pg ">
+      <p class="kick">A oferta</p>
+      <h2>Você entra levando <em>mais do que paga.</em></h2>
+      <div class="stack">
+        <div class="si"><b>Kit de produtos</b><span>30% de desconto na adesão</span></div>
+        <div class="si"><b>Seu link de loja</b><span>o cliente compra e recebe em casa</span></div>
+        <div class="si"><b>Escritório virtual</b><span>pontos, rede e bônus na palma da mão</span></div>
+        <div class="si"><b>Até 50% de desconto</b><span>em todas as recompras, todo mês</span></div>
+        <div class="si"><b>Loja e Cliente VIP</b><span>25% sobre as compras de quem você indica</span></div>
+      </div>
+      <div class="g3 plans"><div class="plan top"><span class="tag">Todos os bônus</span>
+        <b class="pn">Diretor Pró+</b><div class="pv"><span>Você recebe</span><strong>R$ 1.800 em produtos</strong></div><div class="pr"><span>e paga</span> <strong>R$ 1.260</strong></div>
+        <ul><li><span>Desconto na recompra</span><b>50%</b></li>
+        <li><span>Pontos na adesão</span><b>420 pts</b></li>
+        <li><span>Ganhos de rede</span><b class="">Incluso</b></li>
+        <li><span>Início rápido</span><b class="">5 gerações</b></li>
+        <li><span>Bônus de venda de kit</span><b class="">27%</b></li></ul></div><div class="plan">
+        <b class="pn">Empreendedor Pró</b><div class="pv"><span>Você recebe</span><strong>R$ 800 em produtos</strong></div><div class="pr"><span>e paga</span> <strong>R$ 560</strong></div>
+        <ul><li><span>Desconto na recompra</span><b>50%</b></li>
+        <li><span>Pontos na adesão</span><b>187 pts</b></li>
+        <li><span>Ganhos de rede</span><b class="">Incluso</b></li>
+        <li><span>Início rápido</span><b class="">3 gerações</b></li>
+        <li><span>Bônus de venda de kit</span><b class="">27%</b></li></ul></div><div class="plan">
+        <b class="pn">Starter Básico</b><div class="pv"><span>Você recebe</span><strong>R$ 400 em produtos</strong></div><div class="pr"><span>e paga</span> <strong>R$ 280</strong></div>
+        <ul><li><span>Desconto na recompra</span><b>40%</b></li>
+        <li><span>Pontos na adesão</span><b>93 pts</b></li>
+        <li><span>Ganhos de rede</span><b class="no">Não incluso</b></li>
+        <li><span>Início rápido</span><b class="no">Não incluso</b></li>
+        <li><span>Bônus de venda de kit</span><b class="no">Não incluso</b></li></ul></div></div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>11</span></footer></section><section class="pg end dark">
+      <p class="kick">Sem risco escondido</p>
+      <h2>A sua floresta <em>começa hoje.</em></h2>
+      <div class="safe dk">
+        <span>Sem estoque obrigatório: o cliente compra pelo seu link e recebe em casa.</span>
+        <span>A ativação de R$ 100 é só nos meses em que você quiser receber os bônus da rede.</span>
+        <span>O que você compra é produto que você e a sua família usam.</span>
+      </div>
+      <ol class="go">
+        <li><b>Escolha seu plano</b><span>Starter, Empreendedor ou Diretor, com 30% de desconto na adesão.</span></li>
+        <li><b>Ative seu link de loja</b><span>O cliente compra por ele e recebe direto em casa.</span></li>
+        <li><b>Convide as suas 5 pessoas</b><span>Gente que você quer ver bem: da sua casa, do trabalho, da amizade.</span></li>
+      </ol>
+      <p class="cta">Fale com quem te apresentou a Kaiabí para fazer o seu cadastro.</p>
+      <p class="legal">Suplementos alimentares não são medicamentos. Valores e percentuais conforme o plano vigente em 2026; simulações são ilustrativas e não garantem ganhos. Na Kaiabí, todo bônus nasce de um produto que alguém comprou e usou.</p>
+      <div class="endlogo"><svg class="logo" role="img" aria-label="Kaiabí" viewBox="4100 12500 12800 4660" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" d="M 4149,15046 L 4154,17103 4563,17107 4563,16257 5131,16257 5131,16257 C 5588,16257 5748,16744 5839,17103 L 6335,17103 6335,17103 C 6129,16527 5937,16140 5588,16048 L 5588,16048 C 5974,15844 6067,15526 6114,15040 L 5690,15046 5690,15046 C 5588,15500 5570,15828 5058,15926 L 4563,15926 4563,15041 4149,15046 Z M 7836,15041 L 6897,17103 7330,17103 7495,16769 8076,15536 8456,16396 7671,16396 7492,16764 8616,16757 8076,15536 8616,16757 8795,17103 9255,17103 8309,15041 7836,15041 Z M 9772,17103 L 10268,17103 10268,15041 9772,15041 9772,17103 Z M 16116,17103 L 16612,17103 16612,15041 16116,15041 16116,17103 Z M 13629,15041 L 14049,15041 14049,15412 14697,15412 14697,15412 C 15136,15433 15153,15908 14697,15908 L 14049,15908 14049,15041 14697,15041 14697,15041 C 15479,15057 15750,15716 15196,16060 L 15196,16060 C 15764,16381 15640,17092 15041,17103 L 14049,17103 14049,16784 14697,16784 14697,16784 C 15278,16784 15206,16268 14697,16268 L 14049,16268 14049,17103 13629,17103 13629,15041 Z M 16343,14623 L 16116,14899 16629,14899 16839,14631 16343,14623 Z M 10346,13936 L 10346,14334 10346,14334 C 10406,14334 10462,14282 10462,14244 L 10462,13977 10462,13977 C 10452,13860 10346,13901 10346,13936 Z M 10150,13973 L 10150,13973 C 9954,13743 9726,13704 9318,13719 L 9318,13719 C 9211,13719 9241,13842 9271,13904 L 9271,13904 C 9296,13978 9361,14029 9478,14054 L 10072,14063 10072,14063 C 10128,14058 10172,14041 10150,13973 Z M 10046,14351 L 10046,14351 C 10343,14424 10230,14607 10194,14607 L 10194,14607 C 9973,14729 9226,14480 8878,14593 L 8878,14593 C 8768,14629 9046,14107 10046,14351 Z M 10629,14481 L 10629,14481 C 10550,14506 10551,14610 10666,14646 L 10666,14646 C 11149,14641 11602,14769 11878,14549 L 11878,14549 C 11907,14533 11920,14466 11878,14441 L 11878,14441 C 11164,14185 11297,14228 10629,14481 Z M 10711,14051 L 10711,14051 C 10691,14079 10698,14117 10732,14108 L 10732,14108 C 11011,14032 11671,14069 11851,13762 L 11851,13762 C 11903,13651 11858,13593 11740,13575 L 11740,13575 C 11330,13536 11007,13724 10711,14051 Z M 10626,13564 L 10626,13564 C 10587,13642 10649,13695 10715,13647 L 10715,13647 C 10877,13488 11176,13297 11276,13075 L 11276,13075 C 11281,12960 11231,12923 11130,12959 L 11130,12959 C 11004,13017 10899,13108 10813,13232 L 10626,13564 Z M 10308,13534 L 10308,13534 C 10332,13647 10408,13668 10436,13548 L 10436,13548 C 10471,13298 10593,13048 10543,12798 L 10543,12798 C 10541,12726 10511,12674 10447,12627 L 10447,12627 C 10381,12572 10331,12577 10300,12676 L 10300,12676 C 10228,12946 10239,13234 10308,13534 Z M 10209,13675 L 10209,13675 C 10227,13719 10205,13746 10141,13720 L 10141,13720 C 9971,13623 9823,13519 9720,13400 L 9720,13400 C 9660,13324 9634,13257 9569,13179 L 9569,13179 C 9546,13105 9575,13080 9658,13108 L 9658,13108 C 9886,13212 10070,13399 10209,13675 Z M 11752,15041 L 10813,17103 11246,17103 11411,16769 11992,15536 12372,16396 11587,16396 11408,16764 12532,16757 11992,15536 12532,16757 12711,17103 13171,17103 12225,15041 11752,15041 Z"/></svg></div>
+    <footer class="pf"><span>Plano de Negócios Kaiabí · 2026</span><span>12</span></footer></section></body></html>
